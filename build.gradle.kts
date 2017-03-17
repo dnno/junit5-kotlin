@@ -46,6 +46,7 @@ dependencies {
 
     testRuntime("org.junit.vintage:junit-vintage-engine:${junitVintageVersion}")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:${spekFrameworkVersion}")
 
     testCompile("org.junit.vintage:junit-vintage-engine:$junitVintageVersion")
     testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
