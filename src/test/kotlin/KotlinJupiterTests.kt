@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 class KotlinJupiterTests {
 
     @Test
-    fun `hello jupiter test`() {
+    fun `hello jupiter`() {
         assertTrue(true)
     }
 }
