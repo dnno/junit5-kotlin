@@ -1,3 +1,10 @@
+val kotlinVersion = "1.1.3"
+
+// JUnit 5
+val junitPlatformVersion = "1.0.0-RC2"
+val junitVintageVersion = "4.12.0-RC2"
+val junitJupiterVersion = "5.0.0-RC2"
+
 buildscript {
 
     val kotlinVersion = "1.1.3"
@@ -14,13 +21,6 @@ buildscript {
     }
 
 }
-
-val kotlinVersion = "1.1.3"
-
-// JUnit 5
-val junitPlatformVersion = "1.0.0-RC2"
-val junitVintageVersion = "4.12.0-RC2"
-val junitJupiterVersion = "5.0.0-RC2"
 
 apply {
     plugin("kotlin")
@@ -44,3 +44,4 @@ dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
     testCompile("org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion")
 }
+
