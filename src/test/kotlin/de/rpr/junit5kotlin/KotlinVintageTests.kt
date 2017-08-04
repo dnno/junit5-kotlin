@@ -1,9 +1,11 @@
+package de.rpr.junit5kotlin
+
 import org.junit.Test
 
 class KotlinVintageTests {
 
     @Test
-    fun `hello vintage test`(): Unit {
+    fun `hello vintage from kotlin`() {
 
     }
 }

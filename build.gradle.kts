@@ -1,10 +1,10 @@
 buildscript {
 
     var kotlinVersion: String by extra
-    kotlinVersion = "1.1.1"
+    kotlinVersion = "1.1.2"
 
     var junitPlatformVersion: String by extra
-    junitPlatformVersion = "1.0.0-M3"
+    junitPlatformVersion = "1.0.0-RC2"
 
     repositories {
         mavenCentral()
@@ -22,11 +22,8 @@ val kotlinVersion: String by extra
 
 // JUnit 5
 val junitPlatformVersion: String by extra
-val junitVintageVersion = "4.12.0-M3"
-val junitJupiterVersion = "5.0.0-M3"
-
-// Spek Framework
-val spekFrameworkVersion = "1.1.0-beta4"
+val junitVintageVersion = "4.12.0-RC2"
+val junitJupiterVersion = "5.0.0-RC2"
 
 apply {
     plugin("kotlin")
@@ -35,20 +32,18 @@ apply {
 
 repositories {
     mavenCentral()
-    maven {
-        setUrl("http://dl.bintray.com/jetbrains/spek")
-    }
 }
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
-    testRuntime("org.junit.vintage:junit-vintage-engine:${junitVintageVersion}")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
-    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:${spekFrameworkVersion}")
+    testRuntime("org.junit.vintage:junit-vintage-engine:$junitVintageVersion")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+    testRuntime("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
+    testRuntime("org.junit.platform:junit-platform-launcher:$junitPlatformVersion")
 
     testCompile("org.junit.vintage:junit-vintage-engine:$junitVintageVersion")
     testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
-    testCompile("org.jetbrains.spek:spek-api:${spekFrameworkVersion}")
+    testCompile("org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion")
 }
