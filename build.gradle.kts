@@ -1,7 +1,7 @@
 buildscript {
 
     var kotlinVersion: String by extra
-    kotlinVersion = "1.1.2"
+    kotlinVersion = "1.1.3"
 
     var junitPlatformVersion: String by extra
     junitPlatformVersion = "1.0.0-RC2"
