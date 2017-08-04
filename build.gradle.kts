@@ -1,10 +1,7 @@
 buildscript {
 
-    var kotlinVersion: String by extra
-    kotlinVersion = "1.1.3"
-
-    var junitPlatformVersion: String by extra
-    junitPlatformVersion = "1.0.0-RC2"
+    val kotlinVersion = "1.1.3"
+    val junitPlatformVersion = "1.0.0-RC2"
 
     repositories {
         mavenCentral()
@@ -18,10 +15,10 @@ buildscript {
 
 }
 
-val kotlinVersion: String by extra
+val kotlinVersion = "1.1.3"
 
 // JUnit 5
-val junitPlatformVersion: String by extra
+val junitPlatformVersion = "1.0.0-RC2"
 val junitVintageVersion = "4.12.0-RC2"
 val junitJupiterVersion = "5.0.0-RC2"
 
